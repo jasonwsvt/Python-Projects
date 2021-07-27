@@ -2,9 +2,10 @@ import sys, os
 
 def getPath():
 	if len(sys.argv) == 1:
-		path = os.path.abspath(os.getcwd())
+		path = os.getcwd()
 	else:
 		path = sys.argv[1]
+	path = os.path.abspath(path)
 	return path
 
 def getFiles(path):
@@ -24,12 +25,13 @@ def readFile(file, path):
 		print(data)
 		f.close()
 
-def getFile(files):
-	print('Which file would you like to read (any other key to quit)?')
+def getFile(files, path):
+	print(path)
+	print('\nWhich file would you like to read (any other key to quit)?')
 	for i in range(0, len(files)):
 		print(str(i) + " " + files[i])
 
-	num = int(input("0 to " + str(len(files) - 1) + " >>> "))
+	num = int(input("\n0 to " + str(len(files) - 1) + " >>> "))
 	if num not in range(0, len(files)):
 		quit()
 	file = files[num]
@@ -39,7 +41,7 @@ if __name__ == "__main__":
 	path = getPath()
 	while True:
 		files = getFiles(path)
-		file = getFile(files)
+		file = getFile(files, path)
 		readFile(file, path)
 else:
-    print("Please run this from the command prompt.")
+	print("Please run this from the command prompt.")
