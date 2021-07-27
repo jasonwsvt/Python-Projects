@@ -1,4 +1,4 @@
-import sys, os
+import sys, os, time
 
 def getPath():
 	if len(sys.argv) == 1:
@@ -19,13 +19,15 @@ def getFiles(path):
 
 def readFile(file, path):
 	fullPath = os.path.join(path, file)
-	print("Reading " + fullPath)
+	t = time.ctime(os.path.getmtime(fullPath))
+ 
+	print("Reading " + fullPath + " (" + t + ")")
 	with open(fullPath, 'r') as f:
 		data = f.read()
 		print(data)
 		f.close()
 
-def getFile(files, path):
+def chooseFile(files, path):
 	print(path)
 	print('\nWhich file would you like to read (any other key to quit)?')
 	for i in range(0, len(files)):
@@ -41,7 +43,7 @@ if __name__ == "__main__":
 	path = getPath()
 	while True:
 		files = getFiles(path)
-		file = getFile(files, path)
+		file = chooseFile(files, path)
 		readFile(file, path)
 else:
 	print("Please run this from the command prompt.")
