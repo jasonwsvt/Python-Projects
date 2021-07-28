@@ -1,13 +1,33 @@
 class Bird():
-	size = 0
-	wingspan = 0
+	size = None
+	wingspan = None
+
+	def move():
+		print("Bounce!")
+
+	def sing():
+		print("Whistle whistle!")
 
 class Birb(Bird):
 	size = "small"
-	roundedness = 0
-	cuteness = 0
-	fluffiness = 0
+	roundedness = "medium"
+	cuteness = "high"
+	fluffiness = None
+	disheveledness: None
+
+	def move():
+		print("Hop!")
+
+	def sing():
+		print("Chirp!")
 
 class Borb(Bird):
-	roundedness = "complete"
-	muppetness = 0
+	roundedness = "high"
+	cuteness = "medium"
+	muppetness = None
+
+	def move():
+		print("Waddle waddle!")
+
+	def sing():
+		print("Graaak!")
