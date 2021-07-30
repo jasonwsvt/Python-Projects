@@ -13,8 +13,7 @@ import sqlite3
 fileList = ('information.docx', 'Hello.txt', 'myImage.png', 'myMovie.mpg', 'World.txt', 'data.pdf', 'myPhoto.jpg')
 
 def commit(stmt):
-	conn = sqlite3.connect('db_sub.db')
-	with conn:
+	with sqlite3.connect('db_sub.db') as conn:
 		cur = conn.cursor()
 		try:
 			cur.execute(stmt)
@@ -24,8 +23,7 @@ def commit(stmt):
 	conn.close()
 
 def fetchall(stmt):
-	conn = sqlite3.connect('db_sub.db')
-	with conn:
+	with sqlite3.connect('db_sub.db') as conn:
 		cur = conn.cursor()
 		try:
 			cur.execute(stmt)
