@@ -1,8 +1,9 @@
 from django.shortcuts import render
 
 def home(request):
-    user = request.user
+    products = ["Cherries", "Apples", "Oranges", "Strawberries", "Pears", "Watermelons"]
     context = {
-        'user': user,
+        'user': request.user,
+        'products': products,
     }
     return render(request, "home.html", context)
