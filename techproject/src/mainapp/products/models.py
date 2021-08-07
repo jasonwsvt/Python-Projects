@@ -15,6 +15,6 @@ class Product(models.Model):
     image = models.CharField(max_length=255, default="", blank=True)
     
     objects = models.Manager()
-    
+        
     def __str__(self):
         return self.name
