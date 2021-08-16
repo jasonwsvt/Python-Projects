@@ -9,3 +9,4 @@ These are projects written in Python for the Tech Academy Software Developer Boo
   <li><a href="https://github.com/jasonwsvt/Python-Projects/blob/main/timezones.py"> Timezones project</a> - fun with timezones and displaying times.</li>
   <li><a href="https://github.com/jasonwsvt/Python-Projects/blob/main/encapsulation.py"> Encapsulation project</a> - testing out public, private, and protected properties of classes.</li>
   <li><a href="https://github.com/jasonwsvt/Python-Projects/blob/main/readTxts.py"> Read Texts project</a> - a fun project to find all the text files in the current working directory, list them numerically, ask the user which one they'd like to read, and receive a number as a response, and print out that file.</li>
+</ul>
