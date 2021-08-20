@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block page-title %}App Builder 9000{% endblock %}
+{% block page-subtitle %}Python Live Project{% endblock %}
+{% block button1 %}<a href="#apps" class="contact-btn">Portfolio</a>{% endblock %}
+{% block button2 %}<a href="#about" class="contact-btn">Contact Us</a>{% endblock %}
+
+{% block appcontent %}
+    <section class="masonry-grid" id="apps">
+        <br><br>
+        <h2 class="sub-title">App Directory</h2>
+          <div class="grid">
+               <!-- Board Games Link -->
+              <a href="{% url 'BoardGames_home' %}" class="grid-item app-image">
+                  <img src="{% static 'images/BoardGamesApp.png' %}" alt="Board Games">
+                  <div class="fadedbox">
+                      <div class="title text">Board Games</div>
+                  </div>
+              </a>
+              <!-- End BoardGames Link -->
+          </div>
+    </section>
+{% endblock %}

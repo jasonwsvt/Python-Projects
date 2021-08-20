@@ -1,0 +1,20 @@
+{% extends "Recipes/base.html" %}
+{% load static %}
+{% block title %} Board Recipes - Add a Board Recipe {% endblock %}
+
+{% block header %}
+    <h1>Edit the details for the board recipe in the form below.</h1>
+{% endblock %}
+
+{% block content %}
+<div class="add-recipe-form">
+    <form method="POST">
+        {% csrf_token %}
+        <table>
+            {{ form.as_table }}
+        </table>
+        <a id="delete-recipe-button" href="{% url 'Recipes_delete' id %}" class="btn btn-secondary" role="button" aria-disabled="true">Delete Recipe</a>
+        <button id="edit-recipe-button" class="btn btn-primary" type="submit" name="Edit_Recipe">Update Details</button>
+    </form>
+</div>
+{% endblock %}
