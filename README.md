@@ -1,4 +1,4 @@
-<h1>Basic Python Projects</h1>
+<h1>Python Projects</h1>
 These are projects written in Python for the Tech Academy Software Developer Bootcamp.  They use various modules such as tkinter, sqlite3, and django.  Here are the highlights:
 <ul>
   <li><a href="https://github.com/jasonwsvt/Python-Projects/tree/main/DjangoUniversity">Django University project</a> - a Django site with an app for creating classes.</li>
